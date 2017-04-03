@@ -2,7 +2,7 @@ public class Solution {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
         List<String> ret = new ArrayList<>();
         
-        long pre = (long)lower - 1;//用lower-1表示从负无穷到lower-1这个range，用upper+1表示upper+1到正无穷这个range
+        long pre = (long)lower - 1;//用lower-1表示从负无穷到lower-1这个range，用upper+1表示upper+1到正无穷这个range，用long是为了防止溢出，比如lower = Integer.MIN_VALUE
         
         for (int i = 0; i <= nums.length; ++i){//进循环的时候，要让它循环length+1次，第一次用来检查lower到nums[0]之间是不是有Missing range，最后一次用来检查upper到nums[length-1]是不是有missing range
             long next = (i == nums.length) ? (long)upper + 1 : (long)nums[i];
