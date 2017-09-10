@@ -45,7 +45,10 @@ public class WordDictionary {
         return false;
     }
 }
-
+/*
+trie常用来找longest prefix, 可以定义一个类A， 里面包含一个hashmap和一个用于表示是否到字符串尾的boolean，A里的map的key指向下一个A。
+视频 ： https://www.youtube.com/watch?v=AXjmTQ8LEoI
+**/
 /**
  * Your WordDictionary object will be instantiated and called as such:
  * WordDictionary obj = new WordDictionary();
